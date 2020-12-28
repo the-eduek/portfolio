@@ -35,6 +35,8 @@ body {
   font-family: 'Kumbh Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   background: #fff;
+  -webkit-transition: all .25s;
+  transition: all .25s;
 }
 
 a {
