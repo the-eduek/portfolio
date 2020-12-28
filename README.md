@@ -1,4 +1,4 @@
 # portfolio
  My Portfolio Website
 
-eduek.netlify.app
+https://eduek.netlify.app
