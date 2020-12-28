@@ -49,4 +49,10 @@ window.addEventListener("scroll", () => {
     }
 });
 
-window.addEventListener("scroll", () => { footerAdjust.style.height = footer.scrollHeight+"px" });
+window.addEventListener("scroll", () => { 
+    
+    if (screen.width >= 768) {
+        footerAdjust.style.height = footer.scrollHeight+"px";
+    } else {
+        footerAdjust.style.height = "0px";
+    }});
