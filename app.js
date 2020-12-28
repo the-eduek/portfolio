@@ -3,6 +3,8 @@ const navBar = document.querySelector(".navbar");
 const headerText = document.querySelector(".header__text");
 const btnResume = document.querySelector(".btn--resume");
 const themeSelector = document.querySelector(".btn--theme");
+const footer = document.querySelector("footer");
+const footerAdjust = document.querySelector("#footer-adjust");
 
 hamburger.addEventListener("click", () => { 
     hamburger.classList.toggle("hamburger--active");
@@ -45,4 +47,6 @@ window.addEventListener("scroll", () => {
         logo.style.visibility =  "hidden";
         logo.style.opacity = "0";
     }
-})
+});
+
+window.addEventListener("scroll", () => { footerAdjust.style.height = footer.scrollHeight+"px" });

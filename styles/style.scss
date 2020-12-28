@@ -130,7 +130,7 @@ a {
         @include flexStyle();
         justify-content: space-between;
         position: absolute;
-        padding: 0.5rem 0 0.5rem 1rem;
+        padding: 0.5rem 1rem;
         left: 0;
         top: 0;
         transition: .5s;
@@ -141,7 +141,7 @@ a {
             display: block;
             opacity: 0;
             visibility: hidden;
-            transition: .5s;
+            transition: .25s;
             span {
                 color: $primaryColor;
                 font-size: 2rem;
@@ -478,9 +478,15 @@ a {
 
 .container {
     background: $white;
+    position: relative;
+    z-index: 200;
 }
 
 .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
     padding: 10%;
     width: 100%;
     h2 {
@@ -519,7 +525,7 @@ a {
 
 #footer-adjust{
     position: relative;
-    pointer-events: none;
+    z-index: -1;
 }
 
 //  Dark Theme Styles

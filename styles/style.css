@@ -166,7 +166,7 @@ a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: absolute;
-  padding: 0.5rem 0 0.5rem 1rem;
+  padding: 0.5rem 1rem;
   left: 0;
   top: 0;
   -webkit-transition: .5s;
@@ -180,8 +180,8 @@ a:hover {
   display: block;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: .25s;
+  transition: .25s;
 }
 
 .header .navbar .logo span {
@@ -593,9 +593,15 @@ a:hover {
 
 .container {
   background: #fff;
+  position: relative;
+  z-index: 200;
 }
 
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
   padding: 10%;
   width: 100%;
 }
@@ -638,7 +644,7 @@ a:hover {
 
 #footer-adjust {
   position: relative;
-  pointer-events: none;
+  z-index: -1;
 }
 
 body.dark-theme {
