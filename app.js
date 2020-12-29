@@ -50,9 +50,8 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("scroll", () => { 
-    
     if (screen.width >= 768) {
         footerAdjust.style.height = footer.scrollHeight+"px";
     } else {
-        footerAdjust.style.height = "0px";
+        // footerAdjust.style.height = "0px";
     }});

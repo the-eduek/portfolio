@@ -429,7 +429,7 @@ a {
                     margin: 0 0.5rem;
                     &:hover {
                         transform: scale(1.15);
-                        background: unset;
+                        background: transparent;
                     }
                 }
             }
@@ -471,9 +471,11 @@ a {
                 .fa-sass {
                     color: #c69;
                 }
+
                 .fa-js {
                     color: #f0db4f;
                 }
+
                 span {
                     font-weight: bolder;
                     display: inline-block;
@@ -484,17 +486,7 @@ a {
     }
 }
 
-.container {
-    background: $white;
-    position: relative;
-    z-index: 200;
-}
-
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
     padding: 10%;
     width: 100%;
     h2 {
@@ -529,11 +521,6 @@ a {
         text-align: center;
         border-top:  1px solid $dark;
     }
-}
-
-#footer-adjust{
-    position: relative;
-    z-index: -1;
 }
 
 //  Dark Theme Styles
@@ -786,9 +773,12 @@ body.dark-theme {
         }
     }
 
-    .about {        
+    .about, .projects, .blog, .footer{
         padding: 7%;
         padding-top: 5%;
+    }
+
+    .about {        
         .about__info {            
             @include flexStyle();
             .image {
@@ -798,11 +788,7 @@ body.dark-theme {
                 text-align: left;
             } 
         }
-    }
-
-    .projects, .blog, .footer{
-        padding: 7%;
-        padding-top: 5%;
+        
     }
 
     .projects {
@@ -814,9 +800,28 @@ body.dark-theme {
             width: 30%;
         }
     }
+
     .blog {
         .blog-post {
             margin: 2.5rem 0;
         }
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    .container {
+        background: $white;
+        position: relative;
+        z-index: 200;
+    }    
+
+    #footer-adjust{
+        position: relative;
+        z-index: -1;
     }
 }
