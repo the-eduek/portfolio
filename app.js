@@ -50,8 +50,11 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("scroll", () => { 
+    footerLink = navBar.querySelector(`[data-link = "footer-link"]`);
     if (screen.width >= 768) {
         footerAdjust.style.height = footer.scrollHeight+"px";
+        footerLink.setAttribute("href", "#footer-adjust");
     } else {
-        // footerAdjust.style.height = "0px";
+        footerAdjust.style.height = "0px";        
+        footerLink.setAttribute("href", "#contact");
     }});
