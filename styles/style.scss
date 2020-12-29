@@ -24,6 +24,10 @@ $primaryColor: rgb(20, 139, 207);
     box-sizing: border-box;
 }
 
+html { 
+    scroll-behavior: smooth; 
+}
+
 body {
     font-family: 'Kumbh Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: $dark;
@@ -130,7 +134,7 @@ a {
         @include flexStyle();
         justify-content: space-between;
         position: absolute;
-        padding: 0.5rem 1rem;
+        padding-top: 0.3rem;
         left: 0;
         top: 0;
         transition: .5s;
@@ -256,6 +260,10 @@ a {
         box-shadow: 0px 0px 20px #aaa;
         background: $white;
         z-index: 100;
+        padding: 2px;
+        .logo{
+            padding-left: 0.5rem;
+        }
     }
 
     .header__text{
@@ -421,7 +429,7 @@ a {
                     margin: 0 0.5rem;
                     &:hover {
                         transform: scale(1.15);
-                        background: transparent;
+                        background: unset;
                     }
                 }
             }
@@ -463,11 +471,9 @@ a {
                 .fa-sass {
                     color: #c69;
                 }
-
                 .fa-js {
                     color: #f0db4f;
                 }
-
                 span {
                     font-weight: bolder;
                     display: inline-block;
@@ -478,7 +484,17 @@ a {
     }
 }
 
+.container {
+    background: $white;
+    position: relative;
+    z-index: 200;
+}
+
 .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
     padding: 10%;
     width: 100%;
     h2 {
@@ -513,6 +529,11 @@ a {
         text-align: center;
         border-top:  1px solid $dark;
     }
+}
+
+#footer-adjust{
+    position: relative;
+    z-index: -1;
 }
 
 //  Dark Theme Styles
@@ -629,7 +650,7 @@ body.dark-theme {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .header {
         .navbar {
             overflow-x: hidden;
@@ -765,12 +786,9 @@ body.dark-theme {
         }
     }
 
-    .about, .projects, .blog, .footer{
+    .about {        
         padding: 7%;
         padding-top: 5%;
-    }
-
-    .about {        
         .about__info {            
             @include flexStyle();
             .image {
@@ -782,6 +800,11 @@ body.dark-theme {
         }
     }
 
+    .projects, .blog, .footer{
+        padding: 7%;
+        padding-top: 5%;
+    }
+
     .projects {
         @include flexStyle();
         justify-content: space-between;
@@ -791,28 +814,9 @@ body.dark-theme {
             width: 30%;
         }
     }
-
     .blog {
         .blog-post {
             margin: 2.5rem 0;
         }
-    }
-
-    .footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 100;
-    }
-
-    .container {
-        background: $white;
-        position: relative;
-        z-index: 200;
-    }    
-
-    #footer-adjust{
-        position: relative;
-        z-index: -1;
     }
 }
