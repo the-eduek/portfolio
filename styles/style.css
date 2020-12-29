@@ -331,6 +331,7 @@ a:hover {
 .header .header__text {
   -webkit-transform: translateX(-2rem);
           transform: translateX(-2rem);
+  opacity: 0;
   -webkit-animation-name: fade-in;
           animation-name: fade-in;
   -webkit-animation-timing-function: ease-out;
@@ -339,6 +340,8 @@ a:hover {
           animation-duration: .75s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
 }
 
 .header .header__text h1 {

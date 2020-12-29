@@ -268,10 +268,12 @@ a {
 
     .header__text{
         transform: translateX(-2rem);
+        opacity: 0;
         animation-name: fade-in;
         animation-timing-function: ease-out;
         animation-duration: .75s;
         animation-fill-mode: forwards;   
+        animation-delay: .5s;
         h1 {
             font-weight: normal;
             font-size: 2.3rem;
