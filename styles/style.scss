@@ -157,9 +157,10 @@ a {
             li{
                 list-style: none;
                 display: inline-block;
-                padding-right: 2rem;
+                padding-right: 1.5rem;
                 a{
                     position: relative;
+                    font-size: 13px;
                     &::after {
                         content: "";
                         width: -0%;

@@ -208,11 +208,12 @@ a:hover {
 .header .navbar .navbar__links li {
   list-style: none;
   display: inline-block;
-  padding-right: 2rem;
+  padding-right: 1.5rem;
 }
 
 .header .navbar .navbar__links li a {
   position: relative;
+  font-size: 13px;
 }
 
 .header .navbar .navbar__links li a::after {
